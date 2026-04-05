@@ -10,16 +10,19 @@
   --color-border: rgba(255, 255, 255, 0.08);
 
   /* Brand / Accents */
-  --color-accent-1: #6366f1; /* Indigo */
-  --color-accent-2: #ec4899; /* Pink */
-  --color-accent-3: #8b5cf6; /* Violet */
+  --color-accent-1: #6366f1;
+  /* Indigo */
+  --color-accent-2: #ec4899;
+  /* Pink */
+  --color-accent-3: #8b5cf6;
+  /* Violet */
   --gradient-primary: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
   --gradient-glow: conic-gradient(from 180deg at 50% 50%, var(--color-accent-1), var(--color-accent-3), var(--color-accent-2), var(--color-accent-1));
 
   /* Typography */
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
-  
+
   /* Utils */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --border-radius: 16px;
@@ -37,7 +40,9 @@
 /* ==========================================================================
    Reset & Base Styles
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -57,7 +62,12 @@ body {
   transition: var(--transition);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   line-height: 1.2;
 }
@@ -97,9 +107,17 @@ a {
 }
 
 @keyframes float {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(30px, 50px) scale(1.1); }
-  100% { transform: translate(-30px, 20px) scale(0.9); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(30px, 50px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-30px, 20px) scale(0.9);
+  }
 }
 
 .glass-card {
@@ -114,13 +132,13 @@ a {
 
 .glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
 [data-theme="light"] .glass-card:hover {
   border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
 }
 
 /* ==========================================================================
@@ -164,7 +182,8 @@ nav a {
   position: relative;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: var(--color-text-primary);
 }
 
@@ -260,7 +279,7 @@ nav a:hover::after {
   font-size: 0.85rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* ==========================================================================
@@ -336,7 +355,7 @@ nav a:hover::after {
   border: 1px solid transparent;
   background:
     linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
-    linear-gradient(135deg, rgba(99,102,241,0.4), rgba(236,72,153,0.1), rgba(139,92,246,0.4)) border-box;
+    linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.4)) border-box;
   animation: orbit-rotation 28s linear infinite;
   z-index: 1;
 }
@@ -350,7 +369,7 @@ nav a:hover::after {
   border: 1px solid transparent;
   background:
     linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
-    linear-gradient(135deg, rgba(139,92,246,0.3), rgba(99,102,241,0.1), rgba(236,72,153,0.3)) border-box;
+    linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.3)) border-box;
   animation: orbit-rotation-reverse 18s linear infinite;
   z-index: 1;
 }
@@ -378,8 +397,15 @@ nav a:hover::after {
 }
 
 @keyframes icon-pulse {
-  0%   { opacity: 0.7; filter: brightness(1); }
-  100% { opacity: 1;   filter: brightness(1.5); }
+  0% {
+    opacity: 0.7;
+    filter: brightness(1);
+  }
+
+  100% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
 }
 
 /* Comet trail — pseudo element on outer ring */
@@ -398,28 +424,55 @@ nav a:hover::after {
 }
 
 @keyframes comet-fade {
-  0%   { opacity: 0.3; width: 80px; }
-  100% { opacity: 0.8; width: 150px; }
+  0% {
+    opacity: 0.3;
+    width: 80px;
+  }
+
+  100% {
+    opacity: 0.8;
+    width: 150px;
+  }
 }
 
 @keyframes orbit-rotation {
-  0%   { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 @keyframes orbit-rotation-reverse {
-  0%   { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(-360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }
 
 @keyframes counter-rotation {
-  0%   { transform: translateX(-50%) rotate(0deg); }
-  100% { transform: translateX(-50%) rotate(-360deg); }
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(-360deg);
+  }
 }
 
 @keyframes counter-rotation-forward {
-  0%   { transform: translateX(-50%) rotate(0deg); }
-  100% { transform: translateX(-50%) rotate(360deg); }
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
 }
 
 
@@ -446,7 +499,8 @@ nav a:hover::after {
 
 .timeline-dot {
   position: absolute;
-  left: -2.35rem; /* relative to parent left diff */
+  left: -2.35rem;
+  /* relative to parent left diff */
   top: 1.5rem;
   width: 16px;
   height: 16px;
@@ -507,10 +561,418 @@ nav a:hover::after {
     text-align: center;
     padding-top: 6rem;
   }
+
   .hero-actions {
     justify-content: center;
   }
+
   nav {
-    display: none; /* simple hidden for mobile, can add hamburger later */
+    display: none;
+    /* simple hidden for mobile, can add hamburger later */
   }
+}
+
+/* ==========================================================================
+   Fight Club Education Section
+   ========================================================================== */
+.fc-education {
+  background-color: #050505;
+  color: #e0e0e0;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(236, 72, 153, 0.4);
+  border-bottom: 1px solid rgba(236, 72, 153, 0.4);
+  margin: 4rem 0;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.fc-education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>');
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.fc-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 0 5%;
+}
+
+.fc-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  color: var(--color-accent-2);
+  /* Pink */
+  margin-bottom: 3rem;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0px #0b0f19, -2px -2px 0px rgba(99, 102, 241, 0.5);
+  animation: glitch-anim 3s infinite;
+  font-weight: 800;
+}
+
+.fc-entry {
+  border-left: 4px solid var(--color-accent-2);
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.fc-glitch-box {
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-accent-2);
+  animation: glitch-pulse 2s infinite;
+}
+
+.fc-degree {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.fc-school {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+.fc-dates {
+  font-size: 0.9rem;
+  color: var(--color-accent-2);
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.fc-details {
+  list-style: none;
+}
+
+.fc-details li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.fc-details li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-2);
+  font-weight: bold;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes glitch-anim {
+  0% {
+    transform: translate(0)
+  }
+
+  5% {
+    transform: translate(-3px, 2px)
+  }
+
+  10% {
+    transform: translate(3px, -2px)
+  }
+
+  15% {
+    transform: translate(0)
+  }
+
+  100% {
+    transform: translate(0)
+  }
+}
+
+@keyframes glitch-pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: scale(1.1) translateY(-2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   Martyr Supreme Projects Section
+   ========================================================================== */
+.ms-projects {
+  background: radial-gradient(circle at 100% 50%, #1a0505 0%, #050505 60%);
+  color: #e2d1c3;
+  position: relative;
+  text-align: right;
+  border: 1px solid #5a0000;
+  border-right: none;
+  box-shadow: inset 0 20px 50px -20px rgba(139, 0, 0, 0.6);
+  margin-bottom: 4rem;
+  max-width: 65vw !important;
+  /* Leaves 15% space on the left side */
+  margin-left: auto !important;
+  /* Pushes the entire block to the right */
+  margin-right: 0 !important;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+}
+
+.ms-container {
+  max-width: 900px;
+  margin-left: auto;
+  /* Push container entirely to the right */
+  margin-right: 0;
+  /* Align with parent right padding */
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+.ms-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-transform: uppercase;
+  color: #ff3333;
+  /* Crimson red */
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.2);
+  margin-bottom: 4rem;
+  letter-spacing: 5px;
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+}
+
+.ms-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff3333);
+}
+
+.ms-entry {
+  position: relative;
+  margin-bottom: 4rem;
+  padding-right: 2rem;
+  border-right: 4px solid #5a0000;
+  transition: all 0.4s ease;
+}
+
+.ms-entry:hover {
+  border-right-color: #ff3333;
+}
+
+.ms-sigil {
+  position: absolute;
+  right: -11px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ff3333;
+  border-radius: 50%;
+  background: #050505;
+  box-shadow: 0 0 10px rgba(255, 51, 51, 0.6);
+  transition: all 0.4s ease;
+}
+
+.ms-entry:hover .ms-sigil {
+  transform: rotate(90deg) scale(1.2);
+  background: #ff3333;
+  box-shadow: 0 0 20px #ff3333;
+}
+
+.ms-project-name {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.ms-entry:hover .ms-project-name {
+  color: #ffcccc;
+  text-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
+}
+
+.ms-tech-stack {
+  font-size: 0.9rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ff6666;
+  margin-bottom: 1.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.ms-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #a09794;
+  /* slightly ashen text */
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  max-width: 80%;
+  /* keeps text neat while right-aligned */
+}
+
+.ms-link {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #5a0000;
+  padding: 0.6rem 1.8rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  background: rgba(255, 51, 51, 0.02);
+}
+
+.ms-link:hover {
+  background: rgba(255, 51, 51, 0.15);
+  border-color: #ff3333;
+  box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+  transform: translateX(-5px);
+}
+
+/* ==========================================================================
+   Twin Peaks Contact Section (The Black Lodge)
+   ========================================================================== */
+.tp-contact {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tp-curtains {
+  /* Moody draped red curtains */
+  background: repeating-linear-gradient(
+    90deg,
+    #4a0000 0%,
+    #8b0000 5%,
+    #220000 10%
+  );
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  box-shadow: inset 0 -30px 40px rgba(0,0,0,0.9);
+  position: relative;
+  z-index: 2;
+}
+
+.tp-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3rem 4rem;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 50px rgba(0,0,0,1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.tp-title {
+  font-family: 'Times New Roman', Times, serif; /* Elegant, classic, strange */
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #fff;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 5px #000;
+  font-weight: normal;
+}
+
+.tp-subtitle {
+  font-family: 'Courier New', Courier, monospace;
+  color: #c4b5b5;
+  margin-bottom: 3rem;
+  letter-spacing: 3px;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.tp-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tp-btn {
+  font-family: 'Times New Roman', Times, serif;
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 1px solid #fff;
+}
+
+.tp-btn:hover {
+  background: #000;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.tp-btn-outline {
+  background: transparent;
+  color: #fff;
+}
+
+.tp-btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+.tp-floor {
+  height: 15vw;
+  min-height: 120px;
+  /* The iconic zig-zag Black Lodge floor */
+  background: 
+    linear-gradient(135deg, #000000 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #000000 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #000000 25%, transparent 25%),
+    linear-gradient(45deg, #000000 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 30px 30px rgba(0,0,0,0.9);
 }
