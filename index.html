@@ -1,94 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professional Portfolio & CV. Showcasing experience, skills, and projects." />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
-    <title>My Portfolio | Creative Developer</title>
-  </head>
-  <body class="dark-theme">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    
-    <header class="navbar">
-      <div class="logo">DB.<span>dev</span></div>
-      <nav aria-label="Main Navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button id="theme-toggle" class="btn-icon" aria-label="Toggle dark mode">
-        <!-- SVG injected by JS -->
-      </button>
-    </header>
 
-    <main>
-      <!-- Hero Section -->
-      <section id="hero" class="hero section-padding">
-        <div class="hero-content">
-          <span class="badge">👋 Welcome to my portfolio</span>
-          <h1 class="hero-title">I craft <span class="text-gradient">digital experiences</span> that inspire.</h1>
-          <p class="hero-subtitle">Frontend Software Engineer specializing in modern, beautiful, and highly interactive web applications.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Get in Touch</a>
-            <a href="#projects" class="btn btn-secondary">View Work</a>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Portfolio & CV. Showcasing experience, skills, and projects." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <title>My Portfolio | Creative Developer</title>
+</head>
+
+<body class="dark-theme">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section-padding">
+
+      <!-- Orbit Animation -->
+      <div class="orbit-container orbit-outer">
+        <div class="orbiting-object">
+          <!-- Monitor icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
         </div>
-        <div class="hero-visual">
-          <div class="glass-card profile-card">
-             <div class="profile-image-placeholder"></div>
-             <h3>D. Baskhara</h3>
-             <p>Senior Developer</p>
-             <div class="tech-stack">
-               <span class="tech-tag">HTML5</span>
-               <span class="tech-tag">CSS3</span>
-               <span class="tech-tag">JavaScript</span>
-             </div>
-          </div>
+      </div>
+      <div class="orbit-container orbit-inner">
+        <div class="orbiting-object orbiting-terminal">
+          <!-- Terminal icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
         </div>
-      </section>
+      </div>
 
-      <!-- Experience / CV Section -->
-      <section id="experience" class="experience section-padding">
-        <h2 class="section-title">Experience.</h2>
-        <div class="timeline">
-          
-          <div class="timeline-item glass-card">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="date">2023 - Present</span>
-              <h3 class="role">Senior Frontend Engineer</h3>
-              <p class="company">Tech Innovators Inc.</p>
-              <p class="description">Leading the frontend team to build high-performance web applications. Reduced load times by 40% and implemented a comprehensive design system.</p>
-            </div>
-          </div>
+      <div class="hero-content" style="margin-top: 10vh;">
+        <h1 class="hero-title">
+          <span class="title-line">Bridging the gap between</span>
+          <span class="title-line text-gradient">logic and human nature.</span>
+        </h1>
+        <p class="hero-subtitle">
+          I am a Developer uniquely focused on synthesizing analytical systems, creative aesthetics, and cognitive
+          behavior. I build digital experiences that are not only performant and beautiful, but deeply intuitive to the
+          mind.
+        </p>
+      </div>
+    </section>
 
-          <div class="timeline-item glass-card">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="date">2020 - 2023</span>
-              <h3 class="role">Software Engineer</h3>
-              <p class="company">Creative Solutions</p>
-              <p class="description">Developed reactive consumer interfaces. Championed accessibility standards and led the migration to modern JavaScript frameworks.</p>
-            </div>
-          </div>
 
-        </div>
-      </section>
 
-    </main>
-    
-    <footer class="footer">
-      <p>© 2026 D. Baskhara. All rights reserved.</p>
-    </footer>
+  </main>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <footer class="footer">
+    <p>© 2026 All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
