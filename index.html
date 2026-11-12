@@ -4,33 +4,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional Portfolio & CV. Showcasing experience, skills, and projects." />
-  <!-- Fonts -->
+  <meta name="description"
+    content="Demitries Baskhara: software developer working with Python, full-stack web and databases, and AI integration." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <title>My Portfolio | Creative Developer</title>
+  <title>Demitries Baskhara | Software Developer</title>
 </head>
 
 <body>
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
 
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">Demitries Baskhara</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero section-padding">
-
-      <!-- Orbit Animation -->
-      <div class="orbit-container orbit-outer">
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="orbit-container orbit-outer" aria-hidden="true">
         <div class="orbiting-object">
-          <!-- Monitor icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none"
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
             <line x1="8" y1="21" x2="16" y2="21"></line>
@@ -38,10 +45,9 @@
           </svg>
         </div>
       </div>
-      <div class="orbit-container orbit-inner">
+      <div class="orbit-container orbit-inner" aria-hidden="true">
         <div class="orbiting-object orbiting-terminal">
-          <!-- Terminal icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none"
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="4 17 10 11 4 5"></polyline>
             <line x1="12" y1="19" x2="20" y2="19"></line>
@@ -50,93 +56,146 @@
       </div>
 
       <div class="hero-content">
-        <h1 class="hero-title">
-          <span class="title-line">Bridging the gap between</span>
-          <span class="title-line text-gradient">logic and human nature.</span>
-        </h1>
-        <p class="hero-subtitle">
-          I am a Developer uniquely focused on synthesizing analytical systems, creative aesthetics, and cognitive
-          behavior. I build digital experiences that are not only performant and beautiful, but deeply intuitive to the
-          mind.
+        <p class="eyebrow">Software Developer</p>
+        <h1 class="hero-title">Demitries Baskhara</h1>
+        <p class="hero-tagline">
+          <span class="text-gradient">Python · Full-Stack Web · AI Integration</span>
         </p>
+        <p class="hero-summary">
+          Developer with an Informatics Engineering background, building web applications backed by solid
+          database design.
+          I focus on software that is fast, reliable and easy for people to use, from data models to
+          the interface.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="https://www.linkedin.com/in/demitries-baskhara-632bb5268" class="btn btn-secondary"
+            target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
     </section>
 
-    <!-- Education Section - Fight Club Style -->
-    <section id="education" class="section-padding fc-education">
-      <div class="fc-container">
-        <h2 class="fc-title" data-text="INSTITUTIONAL INDOCTRINATION">INSTITUTIONAL INDOCTRINATION</h2>
-        <div class="fc-entry">
-          <div class="fc-glitch-box"></div>
-          <h3 class="fc-degree">INFORMATICS ENGINEERING</h3>
-          <p class="fc-school">UPN (Universitas Pembangunan Nasional)</p>
-          <p class="fc-dates">Class of 2018</p>
-          <ul class="fc-details">
-            <li>First rule of education: You do not talk about education.</li>
-            <li>Laser-focused on developing with Python, full-stack web, and databases.</li>
-            <li>Learned system architecture. Forgot how to sleep.</li>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="card">
+            <h3 class="card-title">Languages</h3>
+            <ul class="chips">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>HTML &amp; CSS</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Web Development</h3>
+            <ul class="chips">
+              <li>Full-stack applications</li>
+              <li>Front-end interfaces</li>
+              <li>Back-end logic</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Data</h3>
+            <ul class="chips">
+              <li>Relational databases</li>
+              <li>Data modeling</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Systems &amp; AI</h3>
+            <ul class="chips">
+              <li>System architecture</li>
+              <li>AI integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="projects-grid">
+          <article class="card project">
+            <h3 class="card-title">Car Dealer Catalog</h3>
+            <ul class="tags">
+              <li>Web</li>
+              <li>Database</li>
+            </ul>
+            <p>
+              A digital showroom for car dealers. It organizes a large vehicle inventory and gives buyers
+              clear, structured details for every car on sale.
+            </p>
+          </article>
+
+          <article class="card project">
+            <h3 class="card-title">Smart Survey System</h3>
+            <ul class="tags">
+              <li>Python</li>
+              <li>Full-Stack</li>
+            </ul>
+            <p>
+              An adaptive survey engine. Rule-based logic changes the follow-up questions in real time
+              based on each respondent's previous answers.
+            </p>
+          </article>
+
+          <article class="card project">
+            <h3 class="card-title">AI Assistant Module</h3>
+            <ul class="tags">
+              <li>Python</li>
+              <li>AI Integration</li>
+            </ul>
+            <p>
+              An AI assistant built into an existing business system. It reads incoming data, highlights
+              important trends and automates routine decisions.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="card timeline-item">
+          <div class="timeline-head">
+            <div>
+              <h3 class="card-title">Informatics Engineering</h3>
+              <p class="muted">UPN (Universitas Pembangunan Nasional)</p>
+            </div>
+            <span class="date">Class of 2018</span>
+          </div>
+          <ul class="bullets">
+            <li>Focus on Python, full-stack web development and databases.</li>
+            <li>Coursework in software engineering and system architecture.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Project Section - Martyr Supreme Style -->
-    <section id="projects" class="section-padding ms-projects">
-      <div class="ms-container">
-        <h2 class="ms-title">SACRIFICIAL WORKS</h2>
-
-        <div class="ms-entry">
-          <div class="ms-sigil"></div>
-          <h3 class="ms-project-name">Car Dealer Catalog</h3>
-          <p class="ms-tech-stack">Web | Database Logic</p>
-          <p class="ms-description">
-            A complete digital showroom built specifically for car sellers. It is designed to easily organize a large
-            number of cars and show buyers clear, organized details about every vehicle for sale.
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="card contact-card">
+          <h2 class="section-title">Let's work together</h2>
+          <p class="muted">
+            Open to developer roles and freelance projects. The best way to reach me is on LinkedIn.
           </p>
+          <a href="https://www.linkedin.com/in/demitries-baskhara-632bb5268" class="btn btn-primary"
+            target="_blank" rel="noopener">Connect on LinkedIn</a>
         </div>
-
-        <div class="ms-entry">
-          <div class="ms-sigil"></div>
-          <h3 class="ms-project-name">Smart Survey System</h3>
-          <p class="ms-tech-stack">Python | Full-Stack</p>
-          <p class="ms-description">
-            A flexible survey form that adapts to whoever is filling it out. Using smart rules, the survey automatically
-            changes its follow-up questions in real-time based on the answers the user just clicked.
-          </p>
-        </div>
-
-        <div class="ms-entry">
-          <div class="ms-sigil"></div>
-          <h3 class="ms-project-name">AI Assistant Module</h3>
-          <p class="ms-tech-stack">Python | AI Integration</p>
-          <p class="ms-description">
-            An Artificial Intelligence tool that acts as an automated assistant. It was added directly into an existing
-            digital system to read information, spot important trends, and make smart decisions automatically.
-          </p>
-        </div>
-
       </div>
     </section>
-
-    <!-- Contact Section - Twin Peaks Style (The Black Lodge) -->
-    <section id="contact" class="tp-contact">
-      <div class="tp-curtains">
-        <div class="tp-content">
-          <h2 class="tp-title">THE BLACK LODGE</h2>
-          <p class="tp-subtitle">"The owls are not what they seem..."</p>
-          <div class="tp-links">
-            <a href="https://www.linkedin.com/in/demitries-baskhara-632bb5268"
-              class="tp-btn tp-btn-outline">LINKEDIN</a>
-          </div>
-        </div>
-      </div>
-      <div class="tp-floor"></div>
-    </section>
-
   </main>
 
   <footer class="footer">
-    <p>© 2026 All rights reserved.</p>
+    <p>© 2026 Demitries Baskhara</p>
   </footer>
 
   <script type="module" src="/src/main.js"></script>
