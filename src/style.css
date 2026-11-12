@@ -29,14 +29,6 @@
   --border-radius-lg: 24px;
 }
 
-[data-theme="light"] {
-  --color-bg: #f8fafc;
-  --color-surface: rgba(255, 255, 255, 0.6);
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
-  --color-border: rgba(0, 0, 0, 0.08);
-}
-
 /* ==========================================================================
    Reset & Base Styles
    ========================================================================== */
@@ -120,115 +112,8 @@ a {
   }
 }
 
-.glass-card {
-  background: var(--color-surface);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  transition: var(--transition);
-}
-
-.glass-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-[data-theme="light"] .glass-card:hover {
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
-}
-
 /* ==========================================================================
-   Navigation
-   ========================================================================== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 5%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  background: var(--color-surface);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.logo {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-}
-
-.logo span {
-  color: var(--color-accent-1);
-}
-
-nav {
-  display: flex;
-  gap: 2rem;
-}
-
-nav a {
-  font-weight: 500;
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
-  transition: var(--transition);
-  position: relative;
-}
-
-nav a:hover,
-nav a.active {
-  color: var(--color-text-primary);
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: var(--gradient-primary);
-  transition: var(--transition);
-  border-radius: 2px;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-.btn-icon {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--color-text-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transition: var(--transition);
-}
-
-.btn-icon:hover {
-  background: var(--color-surface);
-}
-
-.btn-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-/* ==========================================================================
-   Typography & Buttons
+   Typography
    ========================================================================== */
 .text-gradient {
   background: var(--gradient-primary);
@@ -238,50 +123,6 @@ nav a:hover::after {
   display: inline-block;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 30px;
-  transition: var(--transition);
-  font-size: 0.95rem;
-}
-
-.btn-primary {
-  background: var(--color-text-primary);
-  color: var(--color-bg);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px -10px var(--color-accent-1);
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 1px solid var(--color-border);
-  color: var(--color-text-primary);
-}
-
-.btn-secondary:hover {
-  background: var(--color-surface);
-  border-color: var(--color-text-secondary);
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  font-size: 0.85rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
 /* ==========================================================================
    Structure & Layout
    ========================================================================== */
@@ -289,11 +130,6 @@ nav a:hover::after {
   padding: 8rem 5% 4rem;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
 }
 
 /* Hero Section */
@@ -312,6 +148,7 @@ nav a:hover::after {
   max-width: 1200px;
   z-index: 10;
   padding: 0 2rem;
+  margin-top: 10vh;
 }
 
 .hero-title {
@@ -475,76 +312,6 @@ nav a:hover::after {
   }
 }
 
-
-/* Experience Timeline */
-.timeline {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--color-surface);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -2.35rem;
-  /* relative to parent left diff */
-  top: 1.5rem;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--color-bg);
-  border: 2px solid var(--color-accent-1);
-  z-index: 10;
-  transition: var(--transition);
-}
-
-.timeline-item:hover .timeline-dot {
-  background: var(--color-accent-1);
-  box-shadow: 0 0 10px var(--color-accent-1);
-}
-
-.timeline-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.timeline-content .date {
-  font-size: 0.85rem;
-  color: var(--color-accent-2);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-.timeline-content .role {
-  font-size: 1.25rem;
-}
-
-.timeline-content .company {
-  color: var(--color-text-secondary);
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-
-.timeline-content .description {
-  color: var(--color-text-secondary);
-  font-size: 0.95rem;
-  margin-top: 0.5rem;
-}
-
 /* Footer */
 .footer {
   text-align: center;
@@ -560,15 +327,6 @@ nav a:hover::after {
     flex-direction: column;
     text-align: center;
     padding-top: 6rem;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  nav {
-    display: none;
-    /* simple hidden for mobile, can add hamburger later */
   }
 }
 
@@ -847,25 +605,6 @@ nav a:hover::after {
   /* keeps text neat while right-aligned */
 }
 
-.ms-link {
-  display: inline-block;
-  color: #fff;
-  border: 1px solid #5a0000;
-  padding: 0.6rem 1.8rem;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
-  background: rgba(255, 51, 51, 0.02);
-}
-
-.ms-link:hover {
-  background: rgba(255, 51, 51, 0.15);
-  border-color: #ff3333;
-  box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
-  transform: translateX(-5px);
-}
-
 /* ==========================================================================
    Twin Peaks Contact Section (The Black Lodge)
    ========================================================================== */
@@ -975,4 +714,19 @@ nav a:hover::after {
   position: relative;
   z-index: 1;
   box-shadow: inset 0 30px 30px rgba(0,0,0,0.9);
+}
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
